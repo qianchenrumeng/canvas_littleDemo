@@ -65,6 +65,63 @@
         ctx.moveTo(200,300);
         ctx.arc(200,250,50,Math.PI/2,Math.PI * 3/2,false);
         ctx.stroke();
+        
+
+            //画空心圆
+        ctx.beginPath();
+        ctx.arc(600,600,100,0,Math.PI * 2,true);
+        ctx.stroke();
+
+//画黑色半圆
+        ctx.beginPath();
+        ctx.arc(600,600,100,Math.PI/2,Math.PI * 3/2,true);
+        ctx.fillStyle = "#000";
+        ctx.fill();
+
+    
+        //画白色半圆以及小的白色半圆
+        ctx.beginPath();
+        ctx.arc(600,600,100,Math.PI *3/2,Math.PI/2,true);
+        ctx.arc(600,550,50,Math.PI/2,Math.PI * 3/2,true);
+        ctx.fillStyle = "#fff";
+        ctx.fill();
+            //画小的黑色半圆
+        ctx.beginPath();
+        ctx.arc(600,650,50,Math.PI*3/2,Math.PI/2,true);
+        ctx.fillStyle = "#000";
+        ctx.fill();
+        
+            //画最小的黑色圆
+        ctx.beginPath();
+        ctx.arc(600,550,25,0,Math.PI*2,true);
+        ctx.fill();
+
+        //画最小的白色圆
+        ctx.beginPath();
+        ctx.arc(600,650,25,0,Math.PI*2,true);
+        ctx.fillStyle = "#fff";
+        ctx.fill();
+
+        // ctx.beginPath()
+        // ctx.moveTo(600,700);
+        // ctx.arc(600,650,50,Math.PI/2,Math.PI * 3/2,false);
+        // ctx.fillStyle = "#fff";
+
+ 
+        // ctx.fillStyle = "#000";
+        // ctx.moveTo(625,550);
+        // ctx.arc(600,550,25,0,Math.PI * 2,true);
+
+        
+
+       
+
+        // ctx.moveTo(600,600);
+        // ctx.arc(600,550,50,Math.PI/2,Math.PI * 3/2,true);
+  
+        // ctx.moveTo(625,650);
+        // ctx.arc(600,650,25,0,Math.PI * 2,true);
+        
 
     </script>
 </body>
