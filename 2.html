@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>canvas图形</title>
+    </head>
+    <body>
+        <canvas id="canvas" width="400" height="300" ></canvas>
+        <script>
+            // function draw(){
+            //     var canvas = document.getElementById("canvas"),
+            //         ctx = canvas.getContext("2d");
+            //         ctx.fillStyle = "#eeeeff";
+            //         ctx.fillRect(0,0,400,300);
+            //         var n = 0;
+            //         var dx = 150;
+            //         var dy = 150;
+            //         var s = 100;
+            //         ctx.beginPath();
+            //         ctx.fillStyle = "cornflowerblue";
+            //         ctx.strokeStyle = "#eee";
+            //         var x = Math.sin(0);
+            //         var y = Math.cos(0);
+            //         var dig = 11 * Math.PI / 15;
+            //         for(var i=0; i<30; i++){
+            //             var x = Math.sin(i * dig);
+            //             var y = Math.cos(i * dig);
+            //             ctx.lineTo(dx+x*s,dy+y*s);
+            //         }
+            //         ctx.closePath();
+            //         ctx.fill();
+            //         ctx.stroke();
+            // }
+            // draw();
+
+            function drawCopy(){
+                var canvas = document.getElementById("canvas");
+                ctx = canvas.getContext("2d");
+                ctx.fillStyle = "pink";
+                //画背景,一个粉色背景的矩形
+                ctx.fillRect(0,0,400,300);
+
+                var n = 0;
+                var dx = 150;
+                var dy = 150;
+                var s = 100;
+                //开始画画
+                ctx.beginPath();
+                ctx.fillStyle = "cornflowerblue";
+                ctx.strokeStyle = "#eee";
+
+                var x = Math.sin(0);
+                var y = Math.cos(0);
+                var dig = 11 * Math.PI /15;
+                for (var i=0; i<30; i++){
+                    //每两次循环都是一个三角形的
+                    var x = Math.sin(i * dig);
+                    var y = Math.cos(i * dig);
+                    ctx.lineTo(dx+x*s,dy+y*s);  
+                }
+                ctx.closePath();
+                ctx.fill();
+                ctx.stroke();
+
+
+            }
+            //drawCopy();
+
+            var canvas = document.getElementById("canvas");
+            ctx = canvas.getContext("2d");
+            ctx.moveTo(0,0);
+            //两条线加fill，画一个三角形
+            ctx.lineTo(10,100);
+            ctx.lineTo(100,100);
+            ctx.fill();
+            ctx.stroke();
+        </script>
+
+    </body>
+</html>
